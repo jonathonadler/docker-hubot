@@ -29,4 +29,6 @@ echo "Running $ST2_CONTAINER ..."
   -e HUBOT_NAME=$HUBOT_NAME                                      \
   -e HUBOT_ADAPTER=$HUBOT_ADAPTER                                \
   -e HUBOT_SLACK_TOKEN=$HUBOT_SLACK_TOKEN                        \
+  -e HUBOT_SKYPE_USERNAME=$HUBOT_SKYPE_USERNAME                  \
+  -e HUBOT_SKYPE_PASSWORD=$HUBOT_SKYPE_PASSWORD                  \
   stackstorm/hubot

@@ -1,4 +1,4 @@
-FROM node:4.2.2-slim
+FROM node:5.6-slim
 
 RUN apt-get update && apt-get install -y \
   python \
@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
 COPY . /app
 WORKDIR /app
 RUN npm install --production; npm cache clean
+
+RUN /app/scripts/install_phantomjs.sh
 
 RUN apt-get -y remove \
   libicu-dev \
